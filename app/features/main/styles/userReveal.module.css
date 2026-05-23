@@ -1,0 +1,37 @@
+.paramList{
+	display:inline-flex;
+	align-items:center;
+	gap:12px;
+}
+
+.revealContainer{
+	position:relative;
+	overflow:hidden;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.revealContainer.paramItem{
+	margin:0;
+}
+
+.revealContent{
+	position:relative;
+	z-index:1;
+	padding:6px 10px;
+	white-space:nowrap;
+}
+
+.revealOverlay{
+	position:absolute;
+	inset:0;
+	background:#ffffff;
+	z-index:2;
+	transform:translateX(0%);
+	transition:transform 420ms ease;
+	pointer-events:none;
+}
+
+.revealContainer:hover .revealOverlay{
+	transform:translateX(100%);
+}
